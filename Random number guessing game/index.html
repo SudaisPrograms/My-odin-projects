@@ -13,8 +13,8 @@
         const target = Math.floor(Math.random() * 100) + 1;
 
         function checkGuess() {
-            const userInput = Number(document.getElementById('guessInput').value);
-            const result = document.getElementById('result');
+            let userInput = Number(document.getElementById('guessInput').value);
+            let result = document.getElementById('result');
             if (userInput === target) {
                 result.textContent = "nice";
             } else if (userInput < target) {
