@@ -1,0 +1,59 @@
+.button-choice {
+  display: flex;             /* still use flexbox */
+  flex-direction: column;    /* stack items vertically */
+  align-items: flex-start;   /* keep them aligned to the left */
+  gap: 10px;                 /* space between buttons */
+  margin-top: 20px;          /* space below the heading */
+}
+button {
+  background-color: white;   /* make button background white */
+  color: black;              /* text color black for contrast */
+  border: 2px solid black;   /* thin black border */
+  padding: 10px 20px;        /* space inside button */
+  border-radius: 8px;        /* rounded corners */
+  cursor: pointer;           /* pointer cursor on hover */
+}
+.game-area {
+  display: flex;
+  justify-content: space-between; /* left vs right */
+  align-items: center;            /* vertically aligned */
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 500px;
+  
+}
+
+.player-choice img,
+.computer-choice img {
+  width: 150px;   /* make hands large */
+  height: auto;
+}
+
+
+
+/* ✅ Mobile responsiveness */
+@media (max-width: 600px) {
+  .button-choice {
+    flex-direction: row;       /* buttons in a row for mobile */
+    justify-content: center;   /* center them */
+    flex-wrap: wrap;           /* allow wrapping if needed */
+  }
+
+  button {
+    flex: 1 1 auto;           /* make buttons share space equally */
+    min-width: 100px;         /* avoid being too small */
+    font-size: 14px;          /* smaller text for mobile */
+    padding: 8px 12px;        /* tighter padding */
+  }
+
+  .game-area {
+    flex-direction: column;   /* stack vertically */
+    text-align: center;
+    gap: 20px;                /* space between player & computer */
+  }
+
+  .player-choice img,
+  .computer-choice img {
+    width: 100px;  /* smaller hands on mobile */
+  }
+}
